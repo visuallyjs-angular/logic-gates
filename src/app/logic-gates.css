@@ -1,0 +1,341 @@
+
+:root {
+    --vjs-lg-bg-creamy: #fcfaf7;
+    --vjs-lg-edge-color: #888;
+    --vjs-lg-outline-color: #444;
+    --vjs-lg-glass-bg: rgba(255, 255, 255, 0.6);
+    --vjs-lg-glass-border: rgba(255, 255, 255, 0.4);
+
+    --vjs-lg-droppable:#3498db;
+    --vjs-lg-not-droppable:#db3453;
+
+    --vjs-lg-lowlight: #e39f85;
+    --vjs-lg-highlight:orangered;
+
+
+}
+
+/* resize handle color #9fb3df */
+
+.vjs-lg-main {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    background-color: var(--vjs-lg-bg-creamy);
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --vjs-resize-handle-color:#daac56;
+}
+
+/* Sidebar Palette */
+.vjs-palette-wrapper {
+    z-index: 10;
+    height: 100%;
+    width:250px;
+}
+
+.vjs-palette {
+    background: var(--vjs-lg-glass-bg) !important;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-right: 1px solid var(--vjs-lg-glass-border) !important;
+    padding: 10px !important;
+    width: 140px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.vjs-shape-library-palette .vjs-shape-library-palette-set .vjs-shape-library-palette-set-shapes {
+    flex-direction: row;
+}
+
+.vjs-palette-header {
+    display: none !important;
+}
+
+.vjs-palette-item {
+    margin-bottom: 12px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 4px !important;
+    transition: transform 0.2s ease;
+}
+
+.vjs-palette-item:hover {
+    transform: scale(1.1);
+}
+
+/* Surface and Grid */
+.vjs-surface {
+    background-color: var(--vjs-bg-creamy) !important;
+}
+
+.vjs-grid-pattern {
+    fill: rgba(0, 0, 0, 0.1) !important;
+    stroke: none !important;
+}
+
+/* Elements */
+.vjs-vertex {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+}
+
+.vjs-vertex path, .vjs-vertex circle {
+    stroke: var(--vjs-outline-color) !important;
+    stroke-width: 1.5px !important;
+}
+
+.vjs-vertex [fill="{{fill}}"] {
+    fill: white !important;
+}
+
+/* Ports */
+circle[data-vjs-source], circle[data-vjs-target] {
+    fill:transparent !important;
+    stroke: none !important;
+    cursor: crosshair;
+}
+
+.vjs-node:hover circle[data-vjs-source], .vjs-node:hover circle[data-vjs-target] {
+    fill: var(--vjs-lg-outline-color) !important;
+}
+
+/* Edges */
+.vjs-edge-path {
+    stroke: var(--vjs-edge-color) !important;
+    stroke-width: 2px !important;
+}
+
+/* Selections */
+.vjs-selected-element .vjs-vertex-outline {
+    stroke: #2563eb !important;
+    stroke-width: 2px !important;
+}
+
+/**
+ Targets the SVG shape for some selected element. Note the `> .vjs-shape ` component to this selector - it ensures
+ that, for groups, only the group's SVG is targeted, and not that of any nodes that are children of the group.
+ *
+.vjs-selected-element > .vjs-shape * {
+    stroke: #2563eb !important;
+}
+
+/**
+    Targets any source/target elements for some selected element. See note above regarding the `> .vjs-shape ` component
+    of the selector.
+ *
+.vjs-selected-element > .vjs-shape [data-vjs-source],
+.vjs-selected-element > .vjs-shape [data-vjs-target] {
+    fill: #2563eb !important;
+}*/
+
+/* Controls */
+.vjs-lg-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--vjs-glass-bg) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--vjs-glass-border) !important;
+    border-radius: 8px;
+    padding: 8px;
+    --vjs-controls-text-color: #323030;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.vjs-controls {
+    position:relative;
+}
+
+/* Palette */
+
+.vjs-shape-library-palette {
+    padding: 10px !important;
+}
+
+
+.vjs-shape-library-palette-set-title {
+    display:none !important;
+}
+
+.vjs-shape-library-palette-set-shapes {
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.vjs-shape-library-palette-filter {
+    display:none;
+}
+
+.vjs-shape-library-palette-shape {
+    padding: 1px;
+}
+
+.vjs-shape-library-palette-shape:hover {
+    background: #9c8f8f54;
+    border-radius: 3px;
+}
+
+/*
+ * The keyframes for the pulsating glow animation on an SVG element.
+ */
+@keyframes svg-pulsate-glow {
+    0% {
+        /* Start with a moderate scale and a subtle glow */
+        /*transform: scale(1);*/
+        filter: drop-shadow(0 0 2px var(--vjs-lg-droppable));
+       /* opacity: 1;*/
+    }
+    50% {
+        /* Expand the circle and the glow, then start fading out */
+        /*transform: scale(1.25);*/
+        filter: drop-shadow(0 0 10px var(--vjs-lg-droppable));
+        /*opacity: 0.5;*/
+    }
+    100% {
+        /* End larger but fully faded to create a smooth loop */
+        /*transform: scale(1.5);*/
+        /*opacity: 0; */
+    }
+}
+
+/*
+ * For a vertex or edge that is a valid drop target and is currently
+ * being hovered over by a dragged item.
+ */
+.vjs-connector.vjs-palette-drag-active .vjs-connector-path {
+    stroke: var(--vjs-lg-lowlight) !important;
+    stroke-width: 4px;
+}
+
+/*
+ * For a vertex or edge that is a valid drop target and is currently
+ * being hovered over by a dragged item.
+ */
+.vjs-connector.vjs-palette-drag-hover .vjs-connector-path {
+    stroke: var(--vjs-lg-highlight) !important;
+    stroke-width: 4px;
+}
+
+/*
+ * This selector targets the active drag target circle.
+ */
+circle[data-vjs-target].vjs-drag-active, circle.vjs-auto-edge-source, circle.vjs-auto-edge-target {
+    /*
+     * We must set the transform-origin to the center of the circle for the
+     * scale effect to originate from the middle. `transform-box: fill-box`
+     * sets the reference for the transform to be the object's bounding box.
+     */
+    transform-box: fill-box;
+    transform-origin: center;
+
+    /* Apply the animation */
+    animation: svg-pulsate-glow 1.5s ease-out infinite;
+
+    /*
+     * Change the base color to the 'connection' blue.
+     * The original color will be restored when the class is removed.
+    */
+    fill: var(--vjs-lg-droppable) !important;
+}
+
+/*
+ * This style is for when a user drags an edge and hovers over a valid target.
+ * It provides a clear "ready to drop" state.
+ */
+circle[data-vjs-target].vjs-drag-hover, circle.vjs-auto-edge-proximity-source, circle.vjs-auto-edge-proximity-target {
+    /* Stop the pulsating animation from the .vjs-drag-active state */
+    animation: none;
+
+    /* Change color to a 'success' or 'go' state. Forest green is a good choice. */
+    fill: forestgreen !important;
+
+    /* Apply a static, strong glow to confirm the hover action */
+    filter: drop-shadow(0 0 8px forestgreen);
+
+    /* Make the circle slightly larger to feel responsive and acknowledge the hover */
+    transform: scale(1.2);
+
+    /*
+     * Ensure the transform origin is set, as this state can be entered
+     * without the .vjs-drag-active state having been applied first.
+     */
+    transform-box: fill-box;
+    transform-origin: center;
+
+    /* Add a smooth transition for when the hover state is entered/left */
+    transition: transform 0.15s ease-out, filter 0.15s ease-out, fill 0.15s ease-out;
+}
+
+[data-vjs-target][data-vjs-enabled='false'] {
+    filter: drop-shadow(0 0 5px var(--vjs-lg-not-droppable));
+    fill:var(--vjs-lg-not-droppable) !important;
+}
+
+
+/* inspector */
+
+
+.vjs-inspector-header {
+    padding: 24px;
+}
+
+.vjs-inspector-title  {
+    font-size:13px;
+}
+
+.vjs-inspector-properties {
+    padding: 0.25rem;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid #ccc;
+
+}
+
+.vjs-inspector-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.vjs-inspector-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.vjs-inspector-field input[type="text"],
+.vjs-inspector-field input[type="number"],
+.vjs-inspector-field textarea,
+.vjs-inspector-field select {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.2s;
+    background-color: #fff;
+}
+
+.vjs-inspector-field input:focus,
+.vjs-inspector-field textarea:focus,
+.vjs-inspector-field select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.vjs-field-desc {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 2px;
+}

@@ -1,0 +1,364 @@
+{
+  "about": "Binary adder schematic",
+  "nodes": [
+    {
+      "id": "gate2",
+      "type": "or-gate",
+      "x": 700,
+      "y": 380,
+      "width": 120,
+      "height": 120,
+      "text": "OR",
+      "z": 24
+    },
+    {
+      "x": 240,
+      "y": 140,
+      "type": "xor-gate",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 120,
+      "height": 120,
+      "id": "23887924-40cd-4cbf-95af-2089f1620e29",
+      "z": 5
+    },
+    {
+      "x": 60,
+      "y": 173,
+      "type": "junction",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 14,
+      "height": 14,
+      "id": "aeb7c06e-017e-4efd-842d-69c6d1d473ca",
+      "z": 6
+    },
+    {
+      "x": 60,
+      "y": 213,
+      "type": "junction",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 14,
+      "height": 14,
+      "id": "5e76c2f8-6173-4a6c-b1e8-4364711d6daf",
+      "z": 7
+    },
+    {
+      "x": 240,
+      "y": 400,
+      "type": "and-gate",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 120,
+      "height": 120,
+      "id": "75b2abb4-5310-428b-a1fc-3b920113da37",
+      "z": 16
+    },
+    {
+      "x": 190,
+      "y": 173,
+      "type": "junction",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 14,
+      "height": 14,
+      "id": "6e63fff0-4cc7-4b59-a8c8-daadf8fc280a",
+      "z": 12
+    },
+    {
+      "x": 130,
+      "y": 213,
+      "type": "junction",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 14,
+      "height": 14,
+      "id": "2a38d687-dd13-4749-9644-421b5522d0e0",
+      "z": 11
+    },
+    {
+      "x": 490,
+      "y": 270,
+      "type": "and-gate",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 120,
+      "height": 120,
+      "id": "a768f0b1-77f4-4d53-8f13-01f59b3d264e",
+      "z": 23
+    },
+    {
+      "x": 60,
+      "y": 343,
+      "type": "junction",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 14,
+      "height": 14,
+      "id": "82e6713b-6063-446d-9343-aef295e6b2b6",
+      "z": 14
+    },
+    {
+      "x": 700,
+      "y": 160,
+      "type": "xor-gate",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 120,
+      "height": 120,
+      "id": "d3e78a3a-c0e6-4ccd-96bd-3e85fe070558",
+      "z": 18
+    },
+    {
+      "x": 400,
+      "y": 193,
+      "type": "junction",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 14,
+      "height": 14,
+      "id": "3283bc77-89ae-4435-9b99-1ea74f6a6f1e",
+      "z": 20
+    },
+    {
+      "x": 350,
+      "y": 343,
+      "type": "junction",
+      "fill": "#FFFFFF",
+      "outline": "#000000",
+      "outlineWidth": 2,
+      "color": "#000000",
+      "category": "logic-gates",
+      "width": 14,
+      "height": 14,
+      "id": "0b34ec76-92ee-479b-955c-d62ebf9b8469",
+      "z": 21
+    }
+  ],
+  "edges": [
+    {
+      "source": "23887924-40cd-4cbf-95af-2089f1620e29.out",
+      "target": "3283bc77-89ae-4435-9b99-1ea74f6a6f1e",
+      "data": {
+        "anchors": {
+          "source": "Right"
+        },
+        "type": "default"
+      }
+    },
+    {
+      "source": "aeb7c06e-017e-4efd-842d-69c6d1d473ca",
+      "target": "6e63fff0-4cc7-4b59-a8c8-daadf8fc280a",
+      "data": {
+        "anchors": {
+          "source": "Center"
+        },
+        "type": "default"
+      }
+    },
+    {
+      "source": "5e76c2f8-6173-4a6c-b1e8-4364711d6daf",
+      "target": "2a38d687-dd13-4749-9644-421b5522d0e0",
+      "data": {
+        "anchors": {
+          "source": "Center"
+        },
+        "type": "default"
+      }
+    },
+    {
+      "source": "75b2abb4-5310-428b-a1fc-3b920113da37.out",
+      "target": "gate2.in2",
+      "data": {
+        "anchors": {
+          "source": "Right"
+        },
+        "id": "08804cd5-0023-4b86-82b4-307d06e7d975",
+        "type": "default"
+      }
+    },
+    {
+      "source": "6e63fff0-4cc7-4b59-a8c8-daadf8fc280a",
+      "target": "23887924-40cd-4cbf-95af-2089f1620e29.in1",
+      "data": {
+        "anchors": {
+          "source": "Center"
+        },
+        "type": "default"
+      }
+    },
+    {
+      "source": "6e63fff0-4cc7-4b59-a8c8-daadf8fc280a",
+      "target": "75b2abb4-5310-428b-a1fc-3b920113da37.in1",
+      "data": {
+        "anchors": {
+          "source": "Center"
+        },
+        "id": "1f51bec6-ca3b-42ac-a560-db358f850274",
+        "type": "default"
+      }
+    },
+    {
+      "source": "2a38d687-dd13-4749-9644-421b5522d0e0",
+      "target": "23887924-40cd-4cbf-95af-2089f1620e29.in2",
+      "data": {
+        "anchors": {
+          "source": "Center"
+        },
+        "type": "default"
+      }
+    },
+    {
+      "source": "2a38d687-dd13-4749-9644-421b5522d0e0",
+      "target": "75b2abb4-5310-428b-a1fc-3b920113da37.in2",
+      "data": {
+        "anchors": {
+          "source": "Center"
+        },
+        "id": "99d71ac4-c7c7-43c0-866e-e92e9db09b4a",
+        "type": "default"
+      }
+    },
+    {
+      "source": "a768f0b1-77f4-4d53-8f13-01f59b3d264e.out",
+      "target": "gate2.in1",
+      "data": {
+        "anchors": {
+          "source": "Right"
+        },
+        "id": "3a4d6f64-8c6e-474b-801b-0382a080dfeb",
+        "type": "default"
+      }
+    },
+    {
+      "source": "82e6713b-6063-446d-9343-aef295e6b2b6",
+      "target": "0b34ec76-92ee-479b-955c-d62ebf9b8469",
+      "data": {
+        "anchors": {
+          "source": "Center"
+        },
+        "type": "default"
+      }
+    },
+    {
+      "source": "3283bc77-89ae-4435-9b99-1ea74f6a6f1e",
+      "target": "d3e78a3a-c0e6-4ccd-96bd-3e85fe070558.in1",
+      "data": {
+        "anchors": {
+          "source": "Right"
+        },
+        "type": "default"
+      }
+    },
+    {
+      "source": "3283bc77-89ae-4435-9b99-1ea74f6a6f1e",
+      "target": "a768f0b1-77f4-4d53-8f13-01f59b3d264e.in1",
+      "data": {
+        "anchors": {
+          "source": "Center"
+        },
+        "id": "b85f999c-7beb-4a80-a58f-b307ab8524b9",
+        "type": "default"
+      }
+    },
+    {
+      "source": "0b34ec76-92ee-479b-955c-d62ebf9b8469",
+      "target": "a768f0b1-77f4-4d53-8f13-01f59b3d264e.in2",
+      "data": {
+        "anchors": {
+          "source": "Center"
+        },
+        "type": "default"
+      }
+    },
+    {
+      "source": "0b34ec76-92ee-479b-955c-d62ebf9b8469",
+      "target": "d3e78a3a-c0e6-4ccd-96bd-3e85fe070558.in2",
+      "data": {
+        "id": "c06b92c8-1b3d-4b97-98a5-34ad020bf6a8",
+        "type": "default"
+      },
+      "geometry": {
+        "segments": [
+          {
+            "x1": 357,
+            "y1": 350,
+            "x2": 372,
+            "y2": 350,
+            "o": "h"
+          },
+          {
+            "o": "v",
+            "x1": 372,
+            "y1": 350,
+            "x2": 372,
+            "y2": 240
+          },
+          {
+            "x1": 372,
+            "y1": 240,
+            "x2": 685,
+            "y2": 240,
+            "o": "h"
+          },
+          {
+            "x1": 685,
+            "y1": 240,
+            "x2": 700,
+            "y2": 240,
+            "o": "h"
+          }
+        ],
+        "source": {
+          "curX": 357,
+          "curY": 350,
+          "x": 0.5,
+          "y": 0.5,
+          "ox": 0,
+          "oy": 0
+        },
+        "target": {
+          "curX": 700,
+          "curY": 240,
+          "x": 0.5,
+          "y": 0.5,
+          "ox": -1,
+          "oy": 0
+        },
+        "quadrant": 1
+      }
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,15 @@
+<div class="vjs-lg-main">
+  <div class="vjs-palette-wrapper">
+    <vjs-diagram-palette [showLabels]="true"
+                         [iconSize]="{width:120,height:120}"
+                         [autoEdgeConnect]="true"/>
+  </div>
+  <vjs-diagram style="flex-grow:1"
+               [options]="options"
+               url="/dataset.json"/>
+	<div class="vjs-lg-controls">
+		<vjs-controls/>
+		<vjs-export-controls/>
+		<logic-gates-inspector/>
+	</div>
+</div>
