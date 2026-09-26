@@ -49,6 +49,9 @@ const LOGIC_GATE_SHAPES = (terminusSize = 6, showTerminuses = false): ShapeSet =
             defaultTarget: false,
             group:`${inputCount} inputs`,
             description,
+            payload:{
+                inputCount
+            },
             template: `<svg preserveAspectRatio="none" stroke="{{outline}}" overflow="visible" viewBox="0 0 120 120" width="{{width}}" height="{{height}}">
 ${inputs(inputCount, inputPinLength)}
 ${shape}
