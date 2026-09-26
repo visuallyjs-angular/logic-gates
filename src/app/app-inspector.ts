@@ -14,6 +14,8 @@ import {Node, Group} from "@visuallyjs/browser-ui";
                 <label>Label</label>
                 <input type="text" vjs-att="label" placeholder="Label"/>
             </div>
+            
+            <vjs-shape-properties-inspector [vertex]="currentObj"></vjs-shape-properties-inspector>
 
 			<div style="font-size:12px;color:gray">
                 {{currentObj.data['label'] || currentObj.data['type']}}
